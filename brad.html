@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>we loved the pizza so much Animation</title>
+ <header> <section><p>thank you for the pizza <em>brother and sister <strong>makori</strong></em></p>
+  <p>we loved the pizza so much</p>
+  <p>we will never forget</p></section></header>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: radial-gradient(circle, #ffe5b4, #0f71d3); /* Warm "oven-like" background */
+    }
+    .pizza {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #ffdd99; /* Pizza dough */
+      position: relative;
+    }
+    .slice {
+      width: 50px;
+      height: 50px;
+      background: #e74c3c; /* Topping color */
+      border-radius: 50%;
+      position: absolute;
+      animation: disappear 1s ease-out forwards;
+      animation-delay: var(--delay); /* Custom delay per slice */
+    }
+    .slice:nth-child(1) { top: 20px; left: 20px; --delay: 0s; }
+    .slice:nth-child(2) { top: 20px; right: 20px; --delay: 1s; }
+    .slice:nth-child(3) { bottom: 20px; left: 20px; --delay: 2s; }
+    .slice:nth-child(4) { bottom: 20px; right: 20px; --delay: 3s; }
+
+    @keyframes disappear {
+      0% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(0); }
+    }
+    .slice:hover {
+  transform: scale(1.1) rotate(calc(var(--i) * 45deg));
+  background-color: #ffa07a; /* Example hover color */
+}
+  </style>
+</head>
+<body>
+  <div class="pizza">
+    <div class="slice"></div>
+    <div class="slice"></div>
+    <div class="slice"></div>
+    <div class="slice"></div>
+  </div>
+</body>
+<p>i created this with love from Bradley</p>
+</html>
